@@ -16,66 +16,6 @@ El sitio web de Divergente Producción tiene como objetivo mostrar cómo la empr
 * **Git**: Para el control de versiones.
 * **GitHub Pages**: Para la publicación del sitio web.
 
-* `src/components`: Contiene los componentes Astro reutilizables.
-* `src/pages`: Contiene las páginas del sitio web.
-* `src/assets`: Contiene archivos estáticos como imágenes y fuentes.
-* `public`: Contiene archivos estáticos que se copian directamente al directorio de compilación.
-
-## Instalación
-
-1.  Clona el repositorio:
-
-```bash
-git clone URL_DEL_REPOSITORIO
-
-cd nombre-del-repositorio
-
-
-Claro, aquí tienes un ejemplo de un archivo README.md para tu proyecto Astro, basado en la información que me proporcionaste:
-
-Markdown
-
-# Divergente Producción - Sitio Web Astro
-
-Este repositorio contiene el código fuente del sitio web de Divergente Producción, creado con Astro.
-
-## Descripción
-
-El sitio web de Divergente Producción tiene como objetivo mostrar cómo la empresa impulsa negocios a través de estrategias innovadoras de publicidad y marketing. El sitio busca aumentar la visibilidad de los clientes y ayudarlos a alcanzar el éxito.
-
-## Tecnologías utilizadas
-
-* **Astro**: Framework web moderno para construir sitios web rápidos y centrados en el contenido.
-* **CSS**: Para el estilado de la interfaz de usuario.
-* **HTML**: Para la estructura del contenido web.
-* **JavaScript**: Para la interactividad del sitio (si es necesario).
-* **Animate.css**: Para las animaciones de las cartas.
-* **Git**: Para el control de versiones.
-* **GitHub Pages**: Para la publicación del sitio web.
-
-## Estructura del proyecto
-
-.
-├── src/
-│   ├── components/
-│   │   ├── GridCartas.astro
-│   │   ├── Crew.astro
-│   │   └── ...
-│   ├── pages/
-│   │   └── index.astro
-│   └── assets/
-│       └── ...
-├── public/
-│   ├── images/
-│   │   └── ...
-│   └── favicon.ico
-├── package.json
-├── package-lock.json
-├── astro.config.mjs
-├── tsconfig.json
-├── .gitignore
-└── README.md
-
 
 * `src/components`: Contiene los componentes Astro reutilizables.
 * `src/pages`: Contiene las páginas del sitio web.
@@ -86,7 +26,6 @@ El sitio web de Divergente Producción tiene como objetivo mostrar cómo la empr
 
 1.  Clona el repositorio:
 
-```bash
 git clone URL_DEL_REPOSITORIO
 Navega al directorio del proyecto:
 Bash
@@ -129,16 +68,6 @@ HTML
 ...
 Animaciones
 Las cartas en el grid utilizan la librería Animate.css para agregar animaciones de aparición con retrasos dinámicos.
-
-Contribución
-Si deseas contribuir a este proyecto, por favor abre un issue o envía un pull request.
-
-Licencia
-Este proyecto está bajo la licencia 1  MIT.   
-1.
-github.com
-github.com
-
 
 **Recomendaciones:**
 
