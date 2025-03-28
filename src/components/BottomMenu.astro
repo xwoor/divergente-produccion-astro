@@ -1,0 +1,110 @@
+---
+const menuItems = [
+    { logo: '/images/logos-menu/logo1.svg', text: 'divErgEntE' },
+    { logo: '/images/logos-menu/logo2.svg', text: 'proyEctos' },
+    { logo: '/images/logos-menu/logo3.svg', text: 'crEw' },
+    { logo: '/images/logos-menu/logo4.svg', text: 'contacto' },
+];
+---
+
+<nav class="bottom-menu">
+    <ul>
+        {menuItems.map(item => (
+            <li class="animate__animated animate__fadeInUp">
+                <a href="#" class="menu-item">
+                    <div class="icon-container">
+                        <img src={item.logo} alt={`Logo ${item.text}`} title={`Logo ${item.text}`} />
+                    </div>
+                    <span>{item.text}</span>
+                </a>
+            </li>
+        ))}
+    </ul>
+</nav>
+
+<style>
+    .bottom-menu {
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-radius: 15px;
+        z-index: 100;
+        height: 90px;
+    }
+
+    .bottom-menu ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        color: black;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega transición para el desplazamiento */
+    }
+
+    .menu-item img {
+        width: 45px; /* Aumenta el tamaño del icono */
+        height: 45px; /* Aumenta el tamaño del icono */
+        transition: fill 0.3s ease;
+    }
+
+    .menu-item span {
+        font-size: 0.7em;
+        transition: color 0.3s ease;
+        font-size: 12px;
+        font-family: 'Breymont-bold', sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .menu-item:hover .icon-container {
+        background-color: #00CAD3;
+        border: 10px solid white;
+        fill: white;
+    }
+    .menu-item:hover{
+        transform: translateY(-30px);
+        color: #00CAD3;
+    }
+
+    .menu-item:hover img {
+        filter: invert(1);
+
+    }
+
+    @media (min-width: 768px) {
+        .bottom-menu {
+            width: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    @media (max-width: 768px) {
+        .bottom-menu{
+            bottom: 0px;
+            height: 80px;
+        }
+        .bottom-menu {
+            border-radius: 0px;
+        }
+    }
+</style>

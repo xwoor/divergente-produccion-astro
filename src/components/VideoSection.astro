@@ -1,0 +1,43 @@
+<section class="video-section">
+    <div class="video-container">
+        <video src="/images/video.mp4" autoplay loop muted playsinline poster="/images/fondo-video.png">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+    </div>
+</section>
+
+<style>
+    .video-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/images/fondo-video.png'); /* Agrega la imagen de fondo */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; /* Centra la imagen */
+    }
+
+    .video-container {
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    video {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) { /* Estilos para escritorio */
+        .video-section {
+            height: 90vh; /* Ajusta la altura para escritorio */
+        }
+    }
+
+    @media (max-width: 768px) { /* Estilos para móvil */
+        .video-container {
+            width: 100%;
+        }
+    }
+</style>

@@ -1,0 +1,84 @@
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img class="animate__animated animate__backInLeft" src="/images/Logo-divergente-produccion.svg"  alt="Logotipo" title="Logotipo">
+            </a>
+        </div>
+        <div class="textos animate__animated animate__fadeInDown">
+            <p>somos ExpEriEncias, hacEmos ExpEriEncias.</p>
+        </div>
+        <div class="iconos">
+            <a href="#">
+                <img class="animate__animated animate__backInRight" src="/images/icon-ig.svg" alt="Icono Red Social 1" title="Icono Red Social">
+            </a>
+            <a href="#">
+                <img class="animate__animated animate__backInRight" src="/images/icon-in.svg" alt="Icono Red Social 2" title="Icono Red Social">
+            </a>
+        </div>
+    </div>
+</header>
+
+<style>
+    .header {
+        /* background-color: red; */
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centrar verticalmente en móvil */
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px; /* Ancho máximo para escritorio */
+        padding: 0 20px; /* Espaciado horizontal */
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .textos {
+        text-align: center;
+        display: none;
+        flex-grow: 1; /* Permite que el contenedor textos ocupe el espacio restante en desktop */
+    }
+    .textos p {
+        font-family: 'Breymont-light', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    .iconos {
+        display: none;
+    }
+    .iconos img {
+        height: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+    @media (min-width: 768px) {
+        .header {
+            justify-content: center; /* Centrar horizontalmente en escritorio */
+        }
+        .textos, .iconos {
+            display: block;
+        }
+        .logo {
+            width: auto;
+            justify-content: flex-start;
+            margin-right: auto;
+        }
+    }
+</style>
