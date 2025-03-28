@@ -1,48 +1,150 @@
-# Astro Starter Kit: Basics
+# Divergente Producción - Sitio Web Astro
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este repositorio contiene el código fuente del sitio web de Divergente Producción, creado con Astro.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Descripción
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El sitio web de Divergente Producción tiene como objetivo mostrar cómo la empresa impulsa negocios a través de estrategias innovadoras de publicidad y marketing. El sitio busca aumentar la visibilidad de los clientes y ayudarlos a alcanzar el éxito.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Tecnologías utilizadas
 
-## 🚀 Project Structure
+* **Astro**: Framework web moderno para construir sitios web rápidos y centrados en el contenido.
+* **CSS**: Para el estilado de la interfaz de usuario.
+* **HTML**: Para la estructura del contenido web.
+* **JavaScript**: Para la interactividad del sitio (si es necesario).
+* **Animate.css**: Para las animaciones de las cartas.
+* **Git**: Para el control de versiones.
+* **GitHub Pages**: Para la publicación del sitio web.
 
-Inside of your Astro project, you'll see the following folders and files:
+* `src/components`: Contiene los componentes Astro reutilizables.
+* `src/pages`: Contiene las páginas del sitio web.
+* `src/assets`: Contiene archivos estáticos como imágenes y fuentes.
+* `public`: Contiene archivos estáticos que se copian directamente al directorio de compilación.
 
-```text
-/
-├── public/
-│   └── favicon.svg
+## Instalación
+
+1.  Clona el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
+
+cd nombre-del-repositorio
+
+
+Claro, aquí tienes un ejemplo de un archivo README.md para tu proyecto Astro, basado en la información que me proporcionaste:
+
+Markdown
+
+# Divergente Producción - Sitio Web Astro
+
+Este repositorio contiene el código fuente del sitio web de Divergente Producción, creado con Astro.
+
+## Descripción
+
+El sitio web de Divergente Producción tiene como objetivo mostrar cómo la empresa impulsa negocios a través de estrategias innovadoras de publicidad y marketing. El sitio busca aumentar la visibilidad de los clientes y ayudarlos a alcanzar el éxito.
+
+## Tecnologías utilizadas
+
+* **Astro**: Framework web moderno para construir sitios web rápidos y centrados en el contenido.
+* **CSS**: Para el estilado de la interfaz de usuario.
+* **HTML**: Para la estructura del contenido web.
+* **JavaScript**: Para la interactividad del sitio (si es necesario).
+* **Animate.css**: Para las animaciones de las cartas.
+* **Git**: Para el control de versiones.
+* **GitHub Pages**: Para la publicación del sitio web.
+
+## Estructura del proyecto
+
+.
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+│   ├── components/
+│   │   ├── GridCartas.astro
+│   │   ├── Crew.astro
+│   │   └── ...
+│   ├── pages/
+│   │   └── index.astro
+│   └── assets/
+│       └── ...
+├── public/
+│   ├── images/
+│   │   └── ...
+│   └── favicon.ico
+├── package.json
+├── package-lock.json
+├── astro.config.mjs
+├── tsconfig.json
+├── .gitignore
+└── README.md
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+* `src/components`: Contiene los componentes Astro reutilizables.
+* `src/pages`: Contiene las páginas del sitio web.
+* `src/assets`: Contiene archivos estáticos como imágenes y fuentes.
+* `public`: Contiene archivos estáticos que se copian directamente al directorio de compilación.
 
-All commands are run from the root of the project, from a terminal:
+## Instalación
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1.  Clona el repositorio:
 
-## 👀 Want to learn more?
+```bash
+git clone URL_DEL_REPOSITORIO
+Navega al directorio del proyecto:
+Bash
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+cd nombre-del-repositorio
+Instala las dependencias:
+Bash
+
+npm install
+Desarrollo
+Para iniciar el servidor de desarrollo:
+
+Bash
+
+npm run dev
+El sitio web estará disponible en http://localhost:3000.
+
+Construcción
+Para construir el sitio web para producción:
+
+Bash
+
+npm run build
+Los archivos estáticos se generarán en el directorio dist.
+
+Despliegue
+El sitio web está publicado en GitHub Pages. Puedes acceder a él en:
+
+[https://tu-usuario.github.io/tu-repositorio](https://tu-usuario.github.io/tu-repositorio)
+Meta tags
+El sitio web incluye los siguientes meta tags para mejorar el SEO y la compartición en redes sociales:
+
+HTML
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divergente Producción: Publicidad y Marketing Innovador</title>
+<meta name="description" content="Descubre cómo Divergente Producción impulsa tu negocio con estrategias innovadoras de publicidad y marketing. Aumenta tu visibilidad y alcanza el éxito.">
+<meta name="keywords" content="Divergente Producción, publicidad, marketing, estrategias innovadoras, visibilidad, éxito, negocio">
+...
+Animaciones
+Las cartas en el grid utilizan la librería Animate.css para agregar animaciones de aparición con retrasos dinámicos.
+
+Contribución
+Si deseas contribuir a este proyecto, por favor abre un issue o envía un pull request.
+
+Licencia
+Este proyecto está bajo la licencia 1  MIT.   
+1.
+github.com
+github.com
+
+
+**Recomendaciones:**
+
+* Reemplaza `URL_DEL_REPOSITORIO` con la URL real de tu repositorio.
+* Ajusta la descripción y las palabras clave para que sean más precisas.
+* Si agregas más funcionalidades o tecnologías, actualiza el `README.md` en consecuencia.
+* Considera agregar capturas de pantalla o GIFs para mostrar el sitio web.
+* Si tienes un archivo de licencia, agrega un enlace a él en el `README.md`.
+* Añade información de como poder contribuir a tu proyecto.
