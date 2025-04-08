@@ -1,0 +1,202 @@
+<template>
+  <div class="slide-container" data-aos="fade-up">
+    <div class="titles">
+      <button
+        v-for="(slide, index) in slides"
+        :key="index"
+        class="title"
+        :class="{ active: activeSlide === index }"
+        @click="activeSlide = index"
+      >
+        {{ slide.title }}
+        <span v-if="activeSlide === index" class="active-indicator"></span>
+      </button>
+    </div>
+    <div class="content">
+      <h3 :class="{ 'animate__animated animate__fadeInDown': activeSlideChanged }">{{ slides[activeSlide].subtitle }}</h3>
+      <div :class="{ 'animate__animated animate__fadeIn': activeSlideChanged }">
+        <p v-for="(paragraph, i) in slides[activeSlide].content.split('|||')" :key="i">
+          {{ paragraph }}
+        </p>
+      </div>
+      <button class="boton-cotizar animate__animated animate__fadeInUp">
+        <a href="#">cotizar</a>
+      </button>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, watch } from 'vue';
+
+const slides = [
+  {
+    title: 'TradE',
+    subtitle: '',
+    content: `Nos gusta jugar, pero aquí no hay nada al azar, todo tiene una estrategia. Cada activación está pensada para ganar. Sabemos que los KPIs mandan, por eso contamos con tropas especializadas con perfil comercial que, a través de nuestra app, registran en tiempo real el tráfico directo en puntos de venta y generan bases de leads de calidad.|||Alineamos estrategia, creatividad y objetivos para maximizar el impacto, entregando informes que optimizan cada activación. Desde tomas de espacios estratégicos hasta impulso de productos y mecánicas promocionales, creamos experiencias que convierten y dejan huella.`
+  },
+  {
+    title: 'digital',
+    subtitle: '¿rEcuErdas cuando nos prEguntamos cómo sEría el futuro?',
+    content: `Lo estamos viviendo ahora, la era digital, la inteligencia artificial y la itinerancia virtual, han llegado para quedarse. Una presencia online no es solo una vitrina que arroja información, es una herramienta clave para conectar, convertir y posicionar. Diseñamos, conceptualizamos y programamos espacios digitales optimizados para que se muevan a toda máquina. Desde Sitios web, apps, landing pages e intranets para que tu marca se destaque en los motores de búsqueda. `,
+  },
+  {
+    title: 'streaming',
+    subtitle: '',
+    content: 'Nos encargamos de todo para que cada transmisión en YouTube y otras plataformas sea impecable y refleje la identidad de la marca.|||Si es en vivo, tiene que salir perfecto. Nos encargamos de conectar con tu audiencia a través de experiencias en tiempo real, de alta calidad y desde cualquier lugar del mundo.',
+  },
+  {
+    title: 'eventos',
+    subtitle: '',
+    content: 'Hacemos que cualquier idea cobre vida (y si llueve, le rezamos al dios del clima). Creamos estrategias y conceptos únicos alineados con los objetivos de cada cliente, transformando eventos en experiencias.|||Nos encargamos de convenciones, lanzamientos, aperturas de tiendas, eventos para clientes y mucho más. Con un equipo experto en producción y logística, cubrimos todo: sonido, iluminación, escenografía,audiovisual,catering y lo que haga falta. Nada queda al azar, todo lleva nuestro ADN Divergente.',
+  },
+  {
+    title: 'stands',
+    subtitle: '',
+    content: 'Soñamos en grande y hacemos que cada idea cobre vida con precisión.Tenemos experiencia en arquitectura efímera, conceptualizamos y producimos stands, puntos de venta, escenarios para conciertos y eventos que no solo impactan, sino que generan una conexión real con la audiencia.',
+  },
+  {
+    title: 'nosotros',
+    subtitle: 'somos una agEncia productora dE EvEntos',
+    content: 'Somos una agencia creativa de experiencias con 8 años de trayectoria. Nos diferenciamos del BTL tradicional porque nuestra creatividad está siempre alineada a los objetivos de nuestros clientes. Conceptualizamos, diseñamos y ejecutamos estrategias que generan experiencias extraordinarias a marcas como la tuya.',
+  },
+];
+
+const activeSlide = ref(0);
+const activeSlideChanged = ref(false);
+
+watch(activeSlide, () => {
+  activeSlideChanged.value = true;
+  setTimeout(() => {
+    activeSlideChanged.value = false;
+  }, 300); // Duración de la animación (ajusta según necesites)
+});
+</script>
+
+<style scoped>
+@import 'animate.css';
+
+.slide-container {
+  display: flex;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  padding-right: 6px;
+  width: 35%;
+  margin: auto;
+  position: relative;
+}
+
+.titles button {
+  font-family: "Breymont-light", sans-serif;
+  letter-spacing: 3px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.title {
+  background: none;
+  border: none;
+  color: #525355;
+  cursor: pointer;
+  padding: 10px;
+  text-align: right;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+  margin-right: 15px;
+}
+
+.title.active {
+  color: #00ced1;
+}
+
+.content {
+  flex: 1;
+  padding: 0px 25px;
+  width: 66%;
+  border-left: 2px solid #525355;
+  margin: auto;
+  min-height: 250px;
+}
+
+.content h3 {
+  font-family: "AkzidenzGrotesk", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.content p {
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 20px;
+  font-family: 'AkzidenzGrotesk';
+}
+
+.boton-cotizar {
+  background-color: #00CAD3;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Para el enlace dentro del botón */
+  display: inline-block; /* Para que el padding funcione correctamente */
+}
+
+.boton-cotizar a {
+  color: inherit; /* Hereda el color del botón */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.boton-cotizar:hover {
+  background-color: #00b2b2;
+}
+
+.active-indicator {
+  position: absolute;
+  top: 50%;
+  right: -38px;
+  transform: translateY(-50%);
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 202, 211, 0.36);
+  transition: transform 0.2s ease-in-out;
+}
+
+.active-indicator::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #00cad3;
+  border-radius: 50%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+/* Animación de pulso sutil */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+</style>

@@ -1,6 +1,10 @@
-<section class="video-section">
+---
+import video from "../assets/images/video.mp4";
+import bgImage from "../assets/images/fondo-video.png";
+---
+<section class="video-section" data-aos="fade-up-left">
     <div class="video-container">
-        <video src="./images/video.mp4" autoplay loop muted playsinline poster="./images/fondo-video.png">
+        <video src={video} autoplay loop muted playsinline poster={bgImage.src}>
             Tu navegador no soporta la reproducción de videos.
         </video>
     </div>
@@ -8,19 +12,18 @@
 
 <style>
     .video-section {
+        margin: auto;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url('./images/fondo-video.png'); /* Agrega la imagen de fondo */
-        background-size: contain;
+        background-position-x: center;
+        background-position-y: top;
         background-repeat: no-repeat;
-        background-position: center; /* Centra la imagen */
     }
 
     .video-container {
         width: 80%;
-        max-width: 1200px;
     }
 
     video {
@@ -31,12 +34,13 @@
 
     @media (min-width: 768px) { /* Estilos para escritorio */
         .video-section {
-            height: 90vh; /* Ajusta la altura para escritorio */
+            height: 100vh;
         }
     }
 
     @media (max-width: 768px) { /* Estilos para móvil */
         .video-container {
+            margin-top: 0px;
             width: 100%;
         }
     }

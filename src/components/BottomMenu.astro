@@ -1,37 +1,44 @@
 ---
+import { Image } from 'astro:assets';
+
+import logo1 from '../assets/logos-menu/logo1.svg';
+import logo2 from '../assets/logos-menu/logo2.svg';
+import logo3 from '../assets/logos-menu/logo3.svg';
+import logo4 from '../assets/logos-menu/logo4.svg';
+
 const menuItems = [
-    { logo: './images/logos-menu/logo1.svg', text: 'divErgEntE' },
-    { logo: './images/logos-menu/logo2.svg', text: 'proyEctos' },
-    { logo: './images/logos-menu/logo3.svg', text: 'crEw' },
-    { logo: './images/logos-menu/logo4.svg', text: 'contacto' },
+  { logo: logo1, text: 'divErgEntE' },
+  { logo: logo2, text: 'proyEctos' },
+  { logo: logo3, text: 'crEw' },
+  { logo: logo4, text: 'contacto' },
 ];
 ---
 
 <nav class="bottom-menu">
     <ul>
-        {menuItems.map(item => (
-            <li class="animate__animated animate__fadeInUp">
-                <a href="#" class="menu-item">
-                    <div class="icon-container">
-                        <img src={item.logo} alt={`Logo ${item.text}`} title={`Logo ${item.text}`} />
-                    </div>
-                    <span>{item.text}</span>
-                </a>
-            </li>
-        ))}
+      {menuItems.map((item, index) => (
+        <li class={`menu-item-wrapper item-${index}`}>
+          <a href="#" class="menu-item">
+            <div class="icon-container">
+              <Image src={item.logo} alt={`Logo ${item.text}`} title={`Logo ${item.text}`} />
+            </div>
+            <span>{item.text}</span>
+          </a>
+        </li>
+      ))}
     </ul>
-</nav>
+  </nav>
 
 <style>
     .bottom-menu {
         position: fixed;
-        bottom: 50px;
+        bottom: 25px;
         left: 0;
         width: 100%;
         background-color: white;
         border-radius: 15px;
         z-index: 100;
-        height: 90px;
+        height:85px;
     }
 
     .bottom-menu ul {
@@ -63,8 +70,8 @@ const menuItems = [
     }
 
     .menu-item img {
-        width: 45px; /* Aumenta el tamaño del icono */
-        height: 45px; /* Aumenta el tamaño del icono */
+        width: 43px; /* Aumenta el tamaño del icono */
+        height: 43px; /* Aumenta el tamaño del icono */
         transition: fill 0.3s ease;
     }
 
@@ -79,10 +86,11 @@ const menuItems = [
     .menu-item:hover .icon-container {
         background-color: #00CAD3;
         border: 10px solid white;
+        padding: 10px;
         fill: white;
     }
     .menu-item:hover{
-        transform: translateY(-30px);
+        transform: translateY(-40px);
         color: #00CAD3;
     }
 
@@ -93,7 +101,7 @@ const menuItems = [
 
     @media (min-width: 768px) {
         .bottom-menu {
-            width: 500px;
+            width: 400px;
             left: 50%;
             transform: translateX(-50%);
         }

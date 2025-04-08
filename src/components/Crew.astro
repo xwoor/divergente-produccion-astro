@@ -1,69 +1,79 @@
 ---
+import team_javi from "../assets/images/team/team_javi.png";
+import team_ana from "../assets/images/team/team_ana.png";
+import team_juan from "../assets/images/team/team_juan.png";
+import team_pierre from "../assets/images/team/team_pierre.png";
+import team_richie from "../assets/images/team/team_richie.png";
+import team_jony from "../assets/images/team/team_jony.png";
+import team_mario from "../assets/images/team/team_mario.png";
+
 const teamMembers = [
-    {
-        duration:0,
-        name: 'Javi',
-        position: 'ceo',
-        imageUrl: './images/team/team_javi.png',
-    },
-    {
-        duration:0,
-        name: 'Ana',
-        position: 'cfo',
-        imageUrl: './images/team/team_ana.png',
-    },
-    {
-        duration:1,
-        name: 'Juan',
-        position: 'coo',
-        imageUrl: './images/team/team_juan.png',
-    },
-    {
-        duration:1,
-        name: 'Pierre',
-        position: 'grtE. compras',
-        imageUrl: './images/team/team_pierre.png',
-    },
-    {
-        duration:2,
-        name: 'Richie',
-        position: 'dt. producción',
-        imageUrl: './images/team/team_richie.png',
-    },
-    {
-        duration:2,
-        name: 'Jony',
-        position: 'dt. crEATIVO',
-        imageUrl: './images/team/team_jony.png',
-    },
-    {
-        duration:2,
-        name: 'Mario',
-        position: 'web dev / seo',
-        imageUrl: './images/team/team_mario.png',
-    },
+  {
+    duration: 0,
+    name: 'Javi',
+    position: 'ceo',
+    image: team_javi,
+  },
+  {
+    duration: 0,
+    name: 'Ana',
+    position: 'cfo',
+    image: team_ana,
+  },
+  {
+    duration: 1,
+    name: 'Juan',
+    position: 'coo',
+    image: team_juan,
+  },
+  {
+    duration: 1,
+    name: 'Pierre',
+    position: 'grtE. compras',
+    image: team_pierre,
+  },
+  {
+    duration: 2,
+    name: 'Richie',
+    position: 'dt. producción',
+    image: team_richie,
+  },
+  {
+    duration: 2,
+    name: 'Jony',
+    position: 'dt. crEATIVO',
+    image: team_jony,
+  },
+  {
+    duration: 2,
+    name: 'Mario',
+    position: 'web dev / seo',
+    image: team_mario,
+  },
 ];
 ---
 <section class="crew-section2">
-    <div class="crew-grid2">
-        <h1 class="titulo">crew</h1>
-    </div>
+  <div class="crew-grid2">
+    <h1 class="titulo" data-aos="fade-down">crew</h1>
+  </div>
 </section>
+
 <section class="crew-section">
-    <div class="crew-grid">
-        {teamMembers.map((member) => (
-            <div class="crew-member">
-                <div class={`image-container animate__animated animate__slideInUp animate__delay-${member.duration}s`}>
-                    <img src={member.imageUrl} alt={member.name} title={member.name}/>
-                    <div class="text-overlay">
-                        <h2>{member.name}</h2>
-                        <p>{member.position}</p>
-                    </div>
-                </div>
-            </div>
-        ))}
-    </div>
+  <div class="crew-grid">
+    {teamMembers.map((member, index) => (
+      <div class="crew-member">
+        <div class={`image-container animate__animated animate__slideInUp`} style={{ animationDelay: `${(index + 1) * 0.15}s` }}>
+          <img src={ member.image.src } alt={ member.name } title={member.name} />
+          <div class="text-overlay">
+            <h2>{member.name}</h2>
+            <p>{member.position}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
 </section>
+
 
 <style>
 
@@ -75,12 +85,12 @@ const teamMembers = [
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-color: black;
+        /* background-color: black; */
     }
     .crew-section2 {
         width: 100%;
         height: 140px;
-        background-color: black;
+        /* background-color: black; */
     }
     .crew-grid2{
         display: flex;
@@ -95,7 +105,8 @@ const teamMembers = [
         justify-content: center;
         gap: 20px;
         width: 90%;
-        max-width: 1200px;
+        max-width:  900px;
+        margin-bottom: 150px;
     }
 
     .crew-member {
@@ -120,6 +131,7 @@ const teamMembers = [
         object-fit: cover;
         object-position: center;
         transition: transform 0.3s ease;
+        -webkit-user-drag: none;
     }
 
     .text-overlay {
@@ -133,6 +145,7 @@ const teamMembers = [
         z-index: 1;
         opacity: 0;
         transition: opacity 0.3s ease;
+        
     }
 
     .text-overlay h2 {
@@ -142,6 +155,15 @@ const teamMembers = [
         text-transform: uppercase;
         line-height: 4rem;
         filter: blur(0);
+        text-shadow:
+      1px 0 5px gray,   /* Sombra derecha */
+      -1px 0 5px gray,  /* Sombra izquierda */
+      0 1px 5px gray,   /* Sombra inferior */
+      0 -1px 5px gray,  /* Sombra superior */
+      1px 1px 5px gray, /* Sombra diagonal inferior derecha */
+      -1px -1px 5px gray, /* Sombra diagonal superior izquierda */
+      1px -1px 5px gray, /* Sombra diagonal superior derecha */
+      -1px 1px 5px gray; /* Sombra diagonal inferior izquierda */
     }
     .titulo{
         text-align: center !important;
@@ -150,6 +172,7 @@ const teamMembers = [
         font-size: 5em !important;
         text-transform: uppercase;
         line-height: 1px;
+        
     }
 
     .text-overlay p {

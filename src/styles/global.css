@@ -2,13 +2,59 @@
 
 @font-face {
     font-family: 'Breymont-light';
-    src: url('./fonts/Breymont-Light.ttf') format('truetype');
+    src: url('../assets/fonts/Breymont-Light.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Breymont-bold';
-    src: url('./fonts/Breymont-Bold.ttf') format('truetype');
+    src: url('../assets/fonts/Breymont-Bold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'KanedaGothic';
-    src: url('./fonts/KanedaGothic-ExtraBoldItalic.ttf') format('truetype');
+    src: url('../assets/fonts/KanedaGothic-ExtraBoldItalic.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('../assets/fonts/AkzidenzGrotesk.otf') format('opentype');
+}
+
+.bg-section {
+    background-image: url('../assets/images/BG-Divergente-01.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.boton-cotizar{
+    background-color: #00CAD3;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+}
+.boton-cotizar a{
+    text-decoration: none;
+    font-family: 'Breymont-light';
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+.boton-cotizar:hover {
+    background-color: #00B2B2;
+}
+
+
+@media (max-width: 768px){
+    
+    .bg-section {
+        background-color: black;
+      }
+    
+
+    .mt-100{
+        margin-top: 10px;
+    }
+}
+

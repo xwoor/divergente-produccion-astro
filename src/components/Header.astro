@@ -1,19 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+import logo from "../assets/images/Logo-divergente-produccion.svg"
+import igIcon from "../assets/images/icon-ig.svg"
+import inIcon from "../assets/images/icon-in.svg"
+---
+
 <header class="header">
     <div class="container">
         <div class="logo">
             <a href="/">
-                <img class="animate__animated animate__backInLeft" src="./images/Logo-divergente-produccion.svg"  alt="Logotipo" title="Logotipo">
+                <Image data-aos="fade-right" data-aos-delay="300"src={logo}  alt="Logotipo" title="Logotipo">
             </a>
         </div>
-        <div class="textos animate__animated animate__fadeInDown">
+        <div class="textos" data-aos="fade-down">
             <p>somos ExpEriEncias, hacEmos ExpEriEncias.</p>
         </div>
         <div class="iconos">
             <a href="#">
-                <img class="animate__animated animate__backInRight" src="./images/icon-ig.svg" alt="Icono Red Social 1" title="Icono Red Social">
+                <Image data-aos="fade-left" src={igIcon} alt="Icono Red Social 1" title="Icono Red Social">
             </a>
             <a href="#">
-                <img class="animate__animated animate__backInRight" src="./images/icon-in.svg" alt="Icono Red Social 2" title="Icono Red Social">
+                <Image data-aos="fade-left" src={inIcon} alt="Icono Red Social 2" title="Icono Red Social">
             </a>
         </div>
     </div>
@@ -21,8 +29,7 @@
 
 <style>
     .header {
-        /* background-color: red; */
-        height: 50px;
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: center; /* Centrar verticalmente en móvil */
@@ -32,8 +39,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
-        max-width: 1200px; /* Ancho máximo para escritorio */
+        width: 86%;
+        /* max-width: 1037px; */
         padding: 0 20px; /* Espaciado horizontal */
     }
 
@@ -45,6 +52,7 @@
 
     .logo img {
         height: 40px;
+        -webkit-user-drag: none;
     }
 
     .textos {
@@ -54,7 +62,7 @@
     }
     .textos p {
         font-family: 'Breymont-light', sans-serif;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 800;
         letter-spacing: 1px;
     }
@@ -64,13 +72,14 @@
     }
     .iconos img {
         height: 30px;
+        -webkit-user-drag: none;
     }
     a{
         text-decoration: none;
     }
     @media (min-width: 768px) {
         .header {
-            justify-content: center; /* Centrar horizontalmente en escritorio */
+            justify-content: center;
         }
         .textos, .iconos {
             display: block;
@@ -80,5 +89,11 @@
             justify-content: flex-start;
             margin-right: auto;
         }
+    }
+    @media (max-width: 768px) {
+        .header{
+            background-color: white;
+        }
+        
     }
 </style>
