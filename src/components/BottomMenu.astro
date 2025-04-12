@@ -22,7 +22,7 @@ const menuItems = [
             <div class="icon-container">
               <Image src={item.logo} alt={`Logo ${item.text}`} title={`Logo ${item.text}`} />
             </div>
-            <span>{item.text}</span>
+            <span class="txt-menu">{item.text}</span>
           </a>
         </li>
       ))}
@@ -76,9 +76,7 @@ const menuItems = [
     }
 
     .menu-item span {
-        font-size: 0.7em;
         transition: color 0.3s ease;
-        font-size: 12px;
         font-family: 'Breymont-bold', sans-serif;
         letter-spacing: 1px;
     }

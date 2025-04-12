@@ -8,14 +8,17 @@ import inIcon from "../assets/images/icon-in.svg"
 
 <header class="header">
     <div class="container">
+
         <div class="logo">
             <a href="/">
                 <Image data-aos="fade-right" data-aos-delay="300"src={logo}  alt="Logotipo" title="Logotipo">
             </a>
         </div>
+
         <div class="textos" data-aos="fade-down">
             <p>somos ExpEriEncias, hacEmos ExpEriEncias.</p>
         </div>
+
         <div class="iconos">
             <a href="#">
                 <Image data-aos="fade-left" src={igIcon} alt="Icono Red Social 1" title="Icono Red Social">
@@ -24,76 +27,6 @@ import inIcon from "../assets/images/icon-in.svg"
                 <Image data-aos="fade-left" src={inIcon} alt="Icono Red Social 2" title="Icono Red Social">
             </a>
         </div>
+        
     </div>
 </header>
-
-<style>
-    .header {
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center; /* Centrar verticalmente en móvil */
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 86%;
-        /* max-width: 1037px; */
-        padding: 0 20px; /* Espaciado horizontal */
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .logo img {
-        height: 40px;
-        -webkit-user-drag: none;
-    }
-
-    .textos {
-        text-align: center;
-        display: none;
-        flex-grow: 1; /* Permite que el contenedor textos ocupe el espacio restante en desktop */
-    }
-    .textos p {
-        font-family: 'Breymont-light', sans-serif;
-        font-size: 15px;
-        font-weight: 800;
-        letter-spacing: 1px;
-    }
-
-    .iconos {
-        display: none;
-    }
-    .iconos img {
-        height: 30px;
-        -webkit-user-drag: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    @media (min-width: 768px) {
-        .header {
-            justify-content: center;
-        }
-        .textos, .iconos {
-            display: block;
-        }
-        .logo {
-            width: auto;
-            justify-content: flex-start;
-            margin-right: auto;
-        }
-    }
-    @media (max-width: 768px) {
-        .header{
-            background-color: white;
-        }
-        
-    }
-</style>

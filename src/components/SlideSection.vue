@@ -57,7 +57,7 @@ const slides = [
   },
   {
     title: 'nosotros',
-    subtitle: 'somos una agEncia productora dE EvEntos',
+    subtitle: '',
     content: 'Somos una agencia creativa de experiencias con 8 años de trayectoria. Nos diferenciamos del BTL tradicional porque nuestra creatividad está siempre alineada a los objetivos de nuestros clientes. Conceptualizamos, diseñamos y ejecutamos estrategias que generan experiencias extraordinarias a marcas como la tuya.',
   },
 ];
@@ -116,7 +116,7 @@ watch(activeSlide, () => {
 }
 
 .title.active {
-  color: #00ced1;
+  color: #00CAD3;
 }
 
 .content {
@@ -196,6 +196,45 @@ watch(activeSlide, () => {
   }
   50% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .titles {
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid #525355;
+  }
+
+  .titles::-webkit-scrollbar {
+    display: none; /* Oculta la scrollbar en navegadores Webkit */
+  }
+
+  .titles button {
+    flex: 0 0 auto;
+    margin: 0 10px 0 0;
+    white-space: nowrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .active-indicator {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    border-left: none;
+    padding: 0;
+    padding-top: 20px;
   }
 }
 
