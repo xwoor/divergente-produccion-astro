@@ -1,11 +1,12 @@
 ---
-import team_javi from "../assets/images/team/team_javi.png";
-import team_ana from "../assets/images/team/team_ana.png";
-import team_juan from "../assets/images/team/team_juan.png";
-import team_pierre from "../assets/images/team/team_pierre.png";
-import team_richie from "../assets/images/team/team_richie.png";
-import team_jony from "../assets/images/team/team_jony.png";
-import team_mario from "../assets/images/team/team_mario.png";
+import team_javi from "/public/images/team/team_javi.png";
+import team_ana from "/public/images/team/team_ana.png";
+import team_juan from "/public/images/team/team_juan.png";
+import team_pierre from "/public/images/team/team_pierre.png";
+import team_richie from "/public/images/team/team_richie.png";
+import team_jony from "/public/images/team/team_jony.png";
+import team_mario from "/public/images/team/team_mario.png";
+
 
 const teamMembers = [
   {
@@ -13,48 +14,55 @@ const teamMembers = [
     name: 'Javi',
     position: 'ceo',
     image: team_javi,
+    txt: "/images/team/txt_javi.png"
   },
   {
     duration: 0,
     name: 'Ana',
     position: 'cfo',
     image: team_ana,
+    txt: "/images/team/txt_ana.png"
   },
   {
     duration: 1,
     name: 'Juan',
     position: 'coo',
     image: team_juan,
+    txt: "/images/team/txt_juan.png"
   },
   {
     duration: 1,
     name: 'Pierre',
     position: 'grtE. compras',
     image: team_pierre,
+    txt: "/images/team/txt_pierre.png"
   },
   {
     duration: 2,
     name: 'Richie',
     position: 'dt. producción',
     image: team_richie,
+    txt:  "/images/team/txt_richie.png"
   },
   {
     duration: 2,
     name: 'Jony',
     position: 'dt. crEATIVO',
     image: team_jony,
+    txt: "/images/team/txt_jony.png"
   },
   {
     duration: 2,
     name: 'Mario',
     position: 'web dev / seo',
     image: team_mario,
+    txt: "/images/team/txt_mario.png"
   },
 ];
 ---
 <section class="crew-section2">
   <div class="crew-grid2">
-    <h1 class="titulo" data-aos="fade-down">crew</h1>
+    <img class="img-crew" data-aos="fade-right" data-aos-delay="300" src="/images/Crew.png" alt="Crew">
   </div>
 </section>
 
@@ -64,10 +72,16 @@ const teamMembers = [
       <div class="crew-member">
         <div class={`image-container animate__animated animate__slideInUp`} style={{ animationDelay: `${(index + 1) * 0.15}s` }}>
           <img src={ member.image.src } alt={ member.name } title={member.name} />
+          
           <div class="text-overlay">
-            <h2>{member.name}</h2>
+            {member.txt ? (
+              <img src={member.txt} alt={member.name} class="txt-name" />
+            ) : (
+              <h2>{member.name}</h2>
+            )}
             <p>{member.position}</p>
           </div>
+
         </div>
       </div>
     ))}
@@ -76,7 +90,37 @@ const teamMembers = [
 
 
 <style>
+  .text-overlay {
+      width: 100%;
+      position: relative;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .text-overlay img{
+      padding: 0px;
+      margin-bottom: -10px;
+      width:100px !important;
+      width: auto;
+    }
 
+    .txt-name {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 6px black);
+      object-fit: contain;
+      z-index: 2;
+    }
     p{
         margin: 0px;
     }
@@ -85,12 +129,10 @@ const teamMembers = [
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        /* background-color: black; */
     }
     .crew-section2 {
         width: 100%;
         height: 140px;
-        /* background-color: black; */
     }
     .crew-grid2{
         display: flex;
@@ -111,7 +153,7 @@ const teamMembers = [
 
     .crew-member {
         position: relative;
-        width: calc(25% - 20px); /* 4 miembros por fila */
+        width: calc(25% - 20px);
         max-width: 300px;
     }
 
@@ -121,21 +163,23 @@ const teamMembers = [
         height: 0;
         padding-bottom: 146.29%; /* Relación de aspecto 216:316 */
     }
-
-    .image-container img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        transition: transform 0.3s ease;
-        -webkit-user-drag: none;
+    .img-crew{
+      -webkit-user-drag: none;
     }
+    .image-container img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+      -webkit-user-drag: none;
+    }
+
 
     .text-overlay {
         width: 100%;
         position: absolute;
-        top: 60%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -154,13 +198,13 @@ const teamMembers = [
         line-height: 4rem;
         filter: blur(0);
     }
-    .titulo{
-        text-align: center !important;
-        color: white;
-        font-family: 'KanedaGothic';
-        font-size: 5em !important;
-        text-transform: uppercase;
-        line-height: 1px;       
+    .titulo {
+      color: white;
+      font-family: 'KanedaGothic', sans-serif;
+      font-size: 5em;
+      text-transform: uppercase;
+      transform: skewX(-5deg);
+      animation: blurGlow 1.5s infinite alternate ease-in-out;
     }
 
     .text-overlay p {

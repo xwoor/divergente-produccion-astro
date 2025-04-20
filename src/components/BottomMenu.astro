@@ -1,116 +1,150 @@
 ---
-import { Image } from 'astro:assets';
-
-import logo1 from '../assets/logos-menu/logo1.svg';
-import logo2 from '../assets/logos-menu/logo2.svg';
-import logo3 from '../assets/logos-menu/logo3.svg';
-import logo4 from '../assets/logos-menu/logo4.svg';
-
-const menuItems = [
-  { logo: logo1, text: 'divErgEntE' },
-  { logo: logo2, text: 'proyEctos' },
-  { logo: logo3, text: 'crEw' },
-  { logo: logo4, text: 'contacto' },
-];
+import "../styles/estilos-menu.css";
 ---
 
-<nav class="bottom-menu">
-    <ul>
-      {menuItems.map((item, index) => (
-        <li class={`menu-item-wrapper item-${index}`}>
-          <a href="#" class="menu-item">
-            <div class="icon-container">
-              <Image src={item.logo} alt={`Logo ${item.text}`} title={`Logo ${item.text}`} />
+<div
+  data-elementor-type="header"
+  data-elementor-id="86007"
+  class="elementor elementor-86007 elementor-location-header"
+  data-elementor-post-type="elementor_library"
+>
+  <div
+    data-particle_enable="false"
+    data-particle-mobile-disabled="false"
+    class="elementor-element elementor-element-76392ad1 icon-menu v3 e-flex e-con-boxed e-con e-parent e-lazyloaded elementskit-parallax-multi-container bubbling bubble transition"
+    data-id="76392ad1"
+    data-element_type="container"
+    data-settings='{"position":"fixed","ekit_has_onepagescroll_dot":"yes"}'
+  >
+    <div class="e-con-inner">
+      <div
+        class="elementor-element elementor-element-6b02e5f0 elementor-widget__width-initial elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box active"
+        data-id="6b02e5f0"
+        data-element_type="widget"
+        data-settings='{"ekit_we_effect_on":"none"}'
+        data-widget_type="icon-box.default"
+      >
+        <div class="elementor-widget-container">
+          <div class="elementor-icon-box-wrapper">
+            <div class="elementor-icon-box-icon">
+              <a
+                href="#"
+                class="elementor-icon"
+                tabindex="-1"
+                aria-label="INICIO"
+              >
+                <img class="img-icon" alt="icono-divergente" src="/public/logos-menu/logo-menu_1.svg" />
+              </a>
             </div>
-            <span class="txt-menu">{item.text}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-  </nav>
+            <div class="elementor-icon-box-content">
+              <h3 class="elementor-icon-box-title">
+                <a href="#">divErgEntE</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="elementor-element elementor-element-24c3769f elementor-widget__width-initial elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
+        data-id="24c3769f"
+        data-element_type="widget"
+        data-settings='{"ekit_we_effect_on":"none"}'
+        data-widget_type="icon-box.default"
+      >
+        <div class="elementor-widget-container">
+          <div class="elementor-icon-box-wrapper">
+            <div class="elementor-icon-box-icon">
+              <a
+                href="#"
+                class="elementor-icon"
+                tabindex="-1"
+                aria-label="proyEctos"
+              >
+                <img class="img-icon" alt="icono-divergente" src="/public/logos-menu/logo-menu_2.svg" /></a
+              >
+            </div>
 
-<style>
-    .bottom-menu {
-        position: fixed;
-        bottom: 25px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        border-radius: 15px;
-        z-index: 100;
-        height:85px;
-    }
+            <div class="elementor-icon-box-content">
+              <h3 class="elementor-icon-box-title">
+                <a href="#">proyEctos</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="elementor-element elementor-element-2f0a94fe elementor-widget__width-initial elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
+        data-id="2f0a94fe"
+        data-element_type="widget"
+        data-settings='{"ekit_we_effect_on":"none"}'
+        data-widget_type="icon-box.default"
+      >
+        <div class="elementor-widget-container">
+          <div class="elementor-icon-box-wrapper">
+            <div class="elementor-icon-box-icon">
+              <a
+                href="#"
+                class="elementor-icon"
+                tabindex="-1"
+                aria-label="crew"
+              >
+                <img class="img-icon" alt="icono-divergente" src="/public/logos-menu/logo-menu_3.svg" />
+              </a>
+            </div>
 
-    .bottom-menu ul {
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        padding: 5px 0;
-        margin: 0;
-    }
+            <div class="elementor-icon-box-content">
+              <h3 class="elementor-icon-box-title">
+                <a href="#">crEw</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="elementor-element elementor-element-6831d3e4 elementor-widget__width-initial elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
+        data-id="6831d3e4"
+        data-element_type="widget"
+        data-settings='{"ekit_we_effect_on":"none"}'
+        data-widget_type="icon-box.default"
+      >
+        <div class="elementor-widget-container">
+          <div class="elementor-icon-box-wrapper">
+            <div class="elementor-icon-box-icon">
+              <a
+                href="#"
+                class="elementor-icon"
+                tabindex="-1"
+                aria-label="contacto"
+              >
+                <img class="img-icon" alt="icono-divergente" src="/public/logos-menu/logo-menu_4.svg" />
+              </a>
+            </div>
 
-    .menu-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-        border-radius: 10px;
-        transition: background-color 0.3s ease;
-        text-decoration: none;
-        color: black;
-    }
+            <div class="elementor-icon-box-content">
+              <h3 class="elementor-icon-box-title">
+                <a href="#">contacto</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .icon-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        padding: 5px;
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega transición para el desplazamiento */
-    }
-
-    .menu-item img {
-        width: 43px; /* Aumenta el tamaño del icono */
-        height: 43px; /* Aumenta el tamaño del icono */
-        transition: fill 0.3s ease;
-    }
-
-    .menu-item span {
-        transition: color 0.3s ease;
-        font-family: 'Breymont-bold', sans-serif;
-        letter-spacing: 1px;
-    }
-
-    .menu-item:hover .icon-container {
-        background-color: #00CAD3;
-        border: 10px solid white;
-        padding: 10px;
-        fill: white;
-    }
-    .menu-item:hover{
-        transform: translateY(-40px);
-        color: #00CAD3;
-    }
-
-    .menu-item:hover img {
-        filter: invert(1);
-
-    }
-
-    @media (min-width: 768px) {
-        .bottom-menu {
-            width: 400px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    @media (max-width: 768px) {
-        .bottom-menu{
-            bottom: 0px;
-            height: 80px;
-        }
-        .bottom-menu {
-            border-radius: 0px;
-        }
-    }
-</style>
+      <div
+        class="elementor-element elementor-element-2f499e25 elementor-widget__width-initial elementor-absolute elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+        data-id="2f499e25"
+        data-element_type="widget"
+        data-settings='{"_position":"absolute","ekit_we_effect_on":"none"}'
+        data-widget_type="divider.default"
+        style="transform: translateX(25px);"
+      >
+        <div class="elementor-widget-container">
+          <div class="elementor-divider">
+            <span class="elementor-divider-separator"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script is:inline src="/src/scripts/script-menu.js"></script>
