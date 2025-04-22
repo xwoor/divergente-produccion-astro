@@ -1,4 +1,5 @@
 <template>
+  <img class="img-tentaculo-01" src="/images/tentaculo-01.png" alt="img-tentaculo-01">
   <div class="slide-container" data-aos="fade-up">
     <div class="titles">
       <button
@@ -20,7 +21,7 @@
         </p>
       </div>
       <button class="boton-cotizar animate__animated animate__fadeInUp">
-        <a href="#">cotizar</a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=573027212221&text=Hola%2C%20quiero%20conocerlos%20mejor!">cotizar</a>
       </button>
     </div>
   </div>
@@ -198,8 +199,18 @@ watch(activeSlide, () => {
     transform: scale(1);
   }
 }
+.img-tentaculo-01 {
+  position: absolute;
+  width: 20%;
+  -webkit-user-drag: none;
+  animation: flotar 3s ease-in-out infinite;
+  will-change: transform;
+}
 
 @media (max-width: 768px) {
+  .img-tentaculo-01{
+    display: none;
+  }
   .slide-container {
     flex-direction: column;
     padding: 20px 10px;

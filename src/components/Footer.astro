@@ -1,0 +1,81 @@
+---
+const botones = [
+  { texto: 'divErgEntE', href: '/' },
+  { texto: 'proyEctos', href: '/#proyectos' },
+  { texto: 'crEw', href: '/#crew' },
+  { texto: 'contacto', href: 'https://api.whatsapp.com/send?phone=573027212221&text=Hola%2C%20quiero%20conocerlos%20mejor!' },
+];
+---
+
+<footer class="footer-desktop-only">
+    <div class="contenedor-botones">
+        {botones.map((boton) => (
+          <a href={boton.href} class="boton-texto">
+            {boton.texto}
+          </a>
+        ))}
+      </div>
+
+    <p>&copy; {new Date().getFullYear()}divErgEntE producción</p>
+
+    
+</footer>
+  
+  <style>
+.contenedor-botones {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente (si el contenedor tiene altura) */
+    gap: 30px; /* Espacio entre los botones (ajusta según necesites) */
+    padding: 20px; /* Añade un poco de espacio alrededor del contenedor (opcional) */
+  }
+
+  .boton-texto {
+    font-family: 'Breymont-bold';
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white; /* Texto en blanco */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.1em; /* Tamaño de fuente (opcional) */
+  }
+
+  .boton-texto:hover {
+    /* Estilos al pasar el ratón (opcional) */
+    color: lightgray;
+  }
+    .footer-desktop-only {
+      display: none; /* Ocultar por defecto */
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+      padding-bottom: 150px;
+    }
+    .footer-desktop-only p{
+        text-decoration: none;
+        font-family: 'Breymont-light';
+        letter-spacing: 1px;
+        color: white;
+        font-weight: 600;
+    }
+    .footer-desktop-only ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+  
+    .footer-desktop-only ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+  
+    /* Mostrar el footer solo en pantallas de escritorio (ancho mínimo de 768px) */
+    @media (min-width: 768px) {
+      .footer-desktop-only {
+        display: block;
+      }
+    }
+  </style>

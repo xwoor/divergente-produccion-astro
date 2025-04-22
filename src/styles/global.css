@@ -230,3 +230,19 @@ a{
         margin: 0px;
     }
 }
+
+.oculto-por-footer {
+    display: none !important; /* Oculta el elemento */
+    }
+
+    @keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

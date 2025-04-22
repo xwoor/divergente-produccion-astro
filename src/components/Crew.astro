@@ -65,7 +65,9 @@ const teamMembers = [
     <img class="img-crew" data-aos="fade-right" data-aos-delay="300" src="/images/Crew.png" alt="Crew">
   </div>
 </section>
-
+<section class="tentaculo-container">
+  <img class="img-tentaculo-02" src="/images/tentaculo-02.png" alt="img-tentaculo-02">
+</section>
 <section class="crew-section">
   <div class="crew-grid">
     {teamMembers.map((member, index) => (
@@ -90,6 +92,18 @@ const teamMembers = [
 
 
 <style>
+  .tentaculo-container{
+    margin-bottom: 50px;
+  }
+  .img-tentaculo-02{
+    position: absolute;
+    width: 25%;
+    -webkit-user-drag: none;
+    animation: flotar 3s ease-in-out infinite;
+    will-change: transform;
+    z-index: 1;
+    right: 0px;
+  }
   .text-overlay {
       width: 100%;
       position: relative;
