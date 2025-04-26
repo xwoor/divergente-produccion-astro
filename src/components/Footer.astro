@@ -7,19 +7,29 @@ const botones = [
 ];
 ---
 
-<footer class="footer-desktop-only">
-    <div class="contenedor-botones">
-        {botones.map((boton) => (
-          <a href={boton.href} class="boton-texto">
-            {boton.texto}
-          </a>
-        ))}
-      </div>
-
-    <p>&copy; {new Date().getFullYear()}divErgEntE producción</p>
-
-    
+<footer id="footer" class="footer-desktop-only">
+  <div class="contenedor-botones">
+      {botones.map((boton, index) => (
+        <a 
+          href={boton.href} 
+          class="boton-texto" 
+          data-aos="fade-up" 
+          data-aos-duration="1000" 
+          data-aos-delay={`${(index + 1) * 200}`}
+        >
+          {boton.texto}
+        </a>
+      ))}
+  </div>
+  <p 
+    data-aos="fade-up" 
+    data-aos-duration="1000" 
+    data-aos-delay={`${(botones.length + 1) * 200}`}
+  >
+    &copy; {new Date().getFullYear()} divErgEntE producción
+  </p>
 </footer>
+
   
   <style>
 .contenedor-botones {
@@ -39,7 +49,7 @@ const botones = [
     border: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 1.1em; /* Tamaño de fuente (opcional) */
+    font-size: 0.9em; /* Tamaño de fuente (opcional) */
   }
 
   .boton-texto:hover {
@@ -51,7 +61,7 @@ const botones = [
       background-color: black;
       padding: 20px;
       text-align: center;
-      font-size: 0.9em;
+      font-size: 0.8em;
       padding-bottom: 150px;
     }
     .footer-desktop-only p{

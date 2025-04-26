@@ -1,5 +1,9 @@
 <template>
-  <img class="img-tentaculo-01" src="/images/tentaculo-01.png" alt="img-tentaculo-01">
+  <img 
+    data-aos="fade-right"
+    data-aos-duration="3000"
+    class="img-tentaculo-01" src="/images/tentaculo-01.png" alt="img-tentaculo-01">
+  
   <div class="slide-container" data-aos="fade-up">
     <div class="titles">
       <button
@@ -14,8 +18,7 @@
       </button>
     </div>
     <div class="content">
-      <h3 :class="{ 'animate__animated animate__fadeInDown': activeSlideChanged }">{{ slides[activeSlide].subtitle }}</h3>
-      <div :class="{ 'animate__animated animate__fadeIn': activeSlideChanged }">
+      <div :class="{ 'animate__animated animate__fadeIn': activeSlideChanged } + ' p-10'">
         <p v-for="(paragraph, i) in slides[activeSlide].content.split('|||')" :key="i">
           {{ paragraph }}
         </p>
@@ -33,32 +36,26 @@ import { ref, watch } from 'vue';
 const slides = [
   {
     title: 'TradE',
-    subtitle: '',
-    content: `Nos gusta jugar, pero aquí no hay nada al azar, todo tiene una estrategia. Cada activación está pensada para ganar. Sabemos que los KPIs mandan, por eso contamos con tropas especializadas con perfil comercial que, a través de nuestra app, registran en tiempo real el tráfico directo en puntos de venta y generan bases de leads de calidad.|||Alineamos estrategia, creatividad y objetivos para maximizar el impacto, entregando informes que optimizan cada activación. Desde tomas de espacios estratégicos hasta impulso de productos y mecánicas promocionales, creamos experiencias que convierten y dejan huella.`
+    content: `Nada es al azar, todo responde a una estrategia. Cada activación está diseñada para cumplir los KPIs de nuestros clientes.|||Contamos con tropas de perfil comercial, alineadas con la estrategia, creatividad y objetivos para maximizar el impacto. Desde tomas de espacios hasta activaciones de producto y dinámicas promocionales, creamos experiencias que convierten y dejan huella.`
   },
   {
     title: 'digital',
-    subtitle: '¿rEcuErdas cuando nos prEguntamos cómo sEría el futuro?',
-    content: `Lo estamos viviendo ahora, la era digital, la inteligencia artificial y la itinerancia virtual, han llegado para quedarse. Una presencia online no es solo una vitrina que arroja información, es una herramienta clave para conectar, convertir y posicionar. Diseñamos, conceptualizamos y programamos espacios digitales optimizados para que se muevan a toda máquina. Desde Sitios web, apps, landing pages e intranets para que tu marca se destaque en los motores de búsqueda. `,
+    content: `¿Recuerdas cuando nos preguntamos cómo sería el futuro?|||Lo estamos viviendo ahora, la era digital, la inteligencia artificial y la itinerancia virtual, han llegado para quedarse. Una presencia online no es solo una vitrina que arroja información, es una herramienta clave para conectar, convertir y posicionar. Diseñamos, conceptualizamos y programamos espacios digitales optimizados para que se muevan a toda máquina. Desde Sitios web, apps, landing pages e intranets para que tu marca se destaque en los motores de búsqueda. `,
   },
   {
     title: 'streaming',
-    subtitle: '',
     content: 'Nos encargamos de todo para que cada transmisión en YouTube y otras plataformas sea impecable y refleje la identidad de la marca.|||Si es en vivo, tiene que salir perfecto. Nos encargamos de conectar con tu audiencia a través de experiencias en tiempo real, de alta calidad y desde cualquier lugar del mundo.',
   },
   {
     title: 'eventos',
-    subtitle: '',
     content: 'Hacemos que cualquier idea cobre vida (y si llueve, le rezamos al dios del clima). Creamos estrategias y conceptos únicos alineados con los objetivos de cada cliente, transformando eventos en experiencias.|||Nos encargamos de convenciones, lanzamientos, aperturas de tiendas, eventos para clientes y mucho más. Con un equipo experto en producción y logística, cubrimos todo: sonido, iluminación, escenografía,audiovisual,catering y lo que haga falta. Nada queda al azar, todo lleva nuestro ADN Divergente.',
   },
   {
     title: 'stands',
-    subtitle: '',
     content: 'Soñamos en grande y hacemos que cada idea cobre vida con precisión.Tenemos experiencia en arquitectura efímera, conceptualizamos y producimos stands, puntos de venta, escenarios para conciertos y eventos que no solo impactan, sino que generan una conexión real con la audiencia.',
   },
   {
     title: 'nosotros',
-    subtitle: '',
     content: 'Somos una agencia creativa de experiencias con 8 años de trayectoria. Nos diferenciamos del BTL tradicional porque nuestra creatividad está siempre alineada a los objetivos de nuestros clientes. Conceptualizamos, diseñamos y ejecutamos estrategias que generan experiencias extraordinarias a marcas como la tuya.',
   },
 ];
@@ -76,7 +73,9 @@ watch(activeSlide, () => {
 
 <style scoped>
 @import 'animate.css';
-
+.p-10{
+  padding: 15px;
+}
 .slide-container {
   display: flex;
   color: #fff;
@@ -111,7 +110,7 @@ watch(activeSlide, () => {
   cursor: pointer;
   padding: 10px;
   text-align: right;
-  font-size: 1.2em;
+  font-size: 1.1em;
   transition: color 0.3s ease;
   margin-right: 15px;
 }
@@ -132,12 +131,12 @@ watch(activeSlide, () => {
 .content h3 {
   font-family: "AkzidenzGrotesk", sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
-  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .content p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 22px;
   margin-bottom: 20px;
   font-family: 'AkzidenzGrotesk';
@@ -149,12 +148,13 @@ watch(activeSlide, () => {
   padding: 10px 25px;
   border: none;
   border-radius: 30px;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none; /* Para el enlace dentro del botón */
-  display: inline-block; /* Para que el padding funcione correctamente */
+  display: inline-block;
+  margin-left: 15px;
 }
 
 .boton-cotizar a {
@@ -244,8 +244,7 @@ watch(activeSlide, () => {
   .content {
     width: 100%;
     border-left: none;
-    padding: 0;
-    padding-top: 20px;
+    padding: 0px;
   }
 }
 

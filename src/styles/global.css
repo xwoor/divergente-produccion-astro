@@ -16,7 +16,9 @@
     font-family: 'AkzidenzGrotesk';
     src: url('../assets/fonts/AkzidenzGrotesk.otf') format('opentype');
 }
-
+.txt-kanedagothic{
+    font-family: 'KanedaGothic';
+}
 .bg-section {
     background-image: url('../assets/images/BG-Divergente-01.png');
     background-repeat: no-repeat;
@@ -172,6 +174,12 @@ video {
 .textos {
     display: none;
 }
+.txt-breymont-light{
+    font-family: 'Breymont-light', sans-serif;
+}
+.txt-ls-2{
+    letter-spacing: 2px;
+}
 .textos p {
     font-family: 'Breymont-light', sans-serif;
     font-size:clamp(12px, 2.5vw, 14px);
@@ -246,3 +254,4 @@ a{
         transform: translateY(0);
     }
 }
+

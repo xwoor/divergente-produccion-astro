@@ -833,9 +833,9 @@
     }
 
     .elementor-86007 .elementor-element.elementor-element-6b02e5f0, .img-icon {
-        width: var(--container-widget-width, 90px);
-        max-width: 90px;
-        --container-widget-width: 90px;
+        width: var(--container-widget-width, 75px);
+        max-width: 75px;
+        --container-widget-width: 75px;
         --container-widget-flex-grow: 0;
         --icon-box-icon-margin: 0px;
         
@@ -871,9 +871,9 @@
     }
 
     .elementor-86007 .elementor-element.elementor-element-24c3769f {
-        width: var(--container-widget-width, 90px);
-        max-width: 90px;
-        --container-widget-width: 90px;
+        width: var(--container-widget-width, 75px);
+        max-width: 75px;
+        --container-widget-width: 75px;
         --container-widget-flex-grow: 0;
         --icon-box-icon-margin: 0px
     }
@@ -908,9 +908,9 @@
     }
 
     .elementor-86007 .elementor-element.elementor-element-2f0a94fe {
-        width: var(--container-widget-width, 90px);
-        max-width: 90px;
-        --container-widget-width: 90px;
+        width: var(--container-widget-width, 75px);
+        max-width: 75px;
+        --container-widget-width: 75px;
         --container-widget-flex-grow: 0;
         --icon-box-icon-margin: 0px
     }
@@ -945,9 +945,9 @@
     }
 
     .elementor-86007 .elementor-element.elementor-element-6831d3e4 {
-        width: var(--container-widget-width, 90px);
-        max-width: 90px;
-        --container-widget-width: 90px;
+        width: var(--container-widget-width, 75px);
+        max-width: 75px;
+        --container-widget-width: 75px;
         --container-widget-flex-grow: 0;
         --icon-box-icon-margin: 0px
     }
@@ -985,13 +985,13 @@
     .elementor-86007 .elementor-element.elementor-element-2f499e25 {
         --divider-border-style: solid;
         --divider-color: #00000000;
-        --divider-border-width: 80px;
-        width: var(--container-widget-width, 90px);
-        max-width: 90px;
-        --container-widget-width: 80px;
+        --divider-border-width: 75px;
+        width: var(--container-widget-width, 75px);
+        max-width: 75px;
+        --container-widget-width: 75px;
         --container-widget-flex-grow: 0;
-        top: -25px !important;
-        left: 5px !important;
+        top: -26px !important;
+        left: 1px !important;
         z-index: -1
     }
 
@@ -1112,7 +1112,7 @@
         margin: -15px 0 0;
         position: relative;
         z-index: 1;
-        transform: translateY(35px);
+        transform: translateY(30px);
         transition: none
     }
 
@@ -1351,7 +1351,7 @@
         color: var(--default-text-color);
         font-family: 'Breymont-bold';
         letter-spacing: .5px;
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box.active .elementor-icon-box-title a,
@@ -1362,12 +1362,12 @@
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box .elementor-icon-box-icon a,
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box .elementor-icon-box-icon span {
         padding-bottom: 25px;
-        margin-top: -13px
+        margin-top: -15px
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box.active .elementor-icon-box-icon a,
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box.active .elementor-icon-box-icon span {
-        transform: translateY(6px)
+        transform: translateY(10px)
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-icon-box-content {
@@ -1375,7 +1375,7 @@
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box.active .elementor-icon-box-content {
-        transform: translate(-50%, -3px)
+        transform: translate(-50%, -5px)
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-divider .elementor-widget-container:before {
@@ -1383,10 +1383,10 @@
         position: absolute;
         background: var(--menu-active-color);
         border-radius: 100%;
-        top: 5px;
-        left: 5px;
-        height: calc(100% - 5px*2);
-        width: calc(100% - 5px*2)
+        top: 7px;
+        left: 7px;
+        height: calc(100% - 7px * 2);
+        width: calc(100% - 7px * 2);
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-divider {
@@ -1394,14 +1394,14 @@
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-divider:before {
-        top: -6px;
-        left: -19px
+        top: -4px;
+        left: -21px
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-divider:after {
         z-index: -1;
-        top: -6px;
-        right: -19px;
+        top: -4px;
+        right: -21px;
     }
 
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box.active .elementor-icon-box-icon i {
@@ -1418,6 +1418,9 @@
         .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 {
             padding-left: 10px;
             padding-right: 10px
+        }
+        body:not(.rtl) .elementor-86007 .elementor-element.elementor-element-76392ad1 {
+            border-radius: 0px;
         }
     }
 
@@ -1487,8 +1490,9 @@
         border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color)
     }
     .img-icon{
-        width: 40px;
-        margin-bottom: 8px;
+        width: 30px;
+        margin-bottom: 5px;
+        -webkit-user-drag: none;
     }
     .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box.active .elementor-icon-box-icon a, .elementor-86007 .elementor-element.elementor-element-76392ad1.v3 .elementor-widget-icon-box.active .elementor-icon-box-icon span:hover{
         filter: invert(1);

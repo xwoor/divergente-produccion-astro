@@ -2,10 +2,16 @@
 import video from "../assets/images/video.mp4";
 import bgImage from "../assets/images/fondo-video.png";
 ---
-<section class="video-section" data-aos="fade-up-left">
-    <div class="video-container">
-        <video src={video} autoplay loop muted playsinline poster={bgImage.src}>
-            Tu navegador no soporta la reproducción de videos.
-        </video>
-    </div>
+<section class="video-section" data-aos="fade" data-aos-duration="1200" data-aos-delay="100">
+  <div class="video-container">
+    <video
+      src={video}
+      autoplay
+      loop
+      muted
+      playsinline
+      poster={bgImage.src}>
+      Tu navegador no soporta la reproducción de videos.
+    </video>
+  </div>
 </section>

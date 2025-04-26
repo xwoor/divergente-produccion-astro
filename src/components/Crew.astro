@@ -65,16 +65,17 @@ const teamMembers = [
     <img class="img-crew" data-aos="fade-right" data-aos-delay="300" src="/images/Crew.png" alt="Crew">
   </div>
 </section>
+
 <section class="tentaculo-container">
-  <img class="img-tentaculo-02" src="/images/tentaculo-02.png" alt="img-tentaculo-02">
+  <img class="img-tentaculo-02 custom-animation" src="/images/tentaculo-02.png" alt="img-tentaculo-02">
 </section>
+
 <section class="crew-section">
   <div class="crew-grid">
     {teamMembers.map((member, index) => (
-      <div class="crew-member">
-        <div class={`image-container animate__animated animate__slideInUp`} style={{ animationDelay: `${(index + 1) * 0.15}s` }}>
+      <div class="crew-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={`${(index + 1) * 150}`}>
+        <div class="image-container">
           <img src={ member.image.src } alt={ member.name } title={member.name} />
-          
           <div class="text-overlay">
             {member.txt ? (
               <img src={member.txt} alt={member.name} class="txt-name" />
@@ -83,7 +84,6 @@ const teamMembers = [
             )}
             <p>{member.position}</p>
           </div>
-
         </div>
       </div>
     ))}
@@ -92,6 +92,17 @@ const teamMembers = [
 
 
 <style>
+  .img-tentaculo-02 {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+
+.img-tentaculo-02.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
   .tentaculo-container{
     margin-bottom: 50px;
   }
@@ -162,7 +173,7 @@ const teamMembers = [
         gap: 25px;
         width: 90%;
         max-width:  950px;
-        margin-bottom: 150px;
+        /* margin-bottom: 150px; */
     }
 
     .crew-member {
@@ -246,3 +257,12 @@ const teamMembers = [
         }
     }
 </style>
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(() => {
+    document.querySelector('.img-tentaculo-02').classList.add('active');
+  }, 10000); // Aparece después de 1 segundo (1000ms)
+});
+
+</script>
