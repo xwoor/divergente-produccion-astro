@@ -9,7 +9,7 @@
       <div class="contact-column" data-aos="zoom-out-right" data-aos-delay="1000">
         <div class="form-wrapper">
           <h2>Si tienes dudas escríbenos</h2>
-          <form id="contact-form">
+          <form id="contact-form" action="https://formspree.io/f/xnndjqbv" method="POST">
             <label>
               Nombre
               <input type="text" name="name" />
@@ -45,12 +45,15 @@
 </section>
 
 <script is:inline>
-  function validateForm(event) {
+  async function validateForm(event) {
     event.preventDefault();
     const form = event.target;
     let hasError = false;
 
+    // Limpiar errores anteriores
     form.querySelectorAll('.error').forEach(e => e.remove());
+    const successMessage = document.getElementById('success-message');
+    if (successMessage) successMessage.remove();
 
     const name = form.name.value.trim();
     const email = form.email.value.trim();
@@ -63,8 +66,22 @@
     if (!message) showError(form.message, 'El mensaje es obligatorio'), hasError = true;
 
     if (!hasError) {
-      alert('¡Formulario enviado correctamente!');
-      form.reset();
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (response.ok) {
+          form.reset();
+          showSuccess(form, '¡Mensaje enviado correctamente!');
+        } else {
+          showSuccess(form, 'Hubo un problema al enviar el mensaje. Intenta de nuevo.');
+        }
+      } catch (error) {
+        showSuccess(form, 'Error de conexión. Intenta más tarde.');
+      }
     }
   }
 
@@ -75,9 +92,21 @@
     input.parentNode.appendChild(error);
   }
 
+  function showSuccess(form, message) {
+    const success = document.createElement('div');
+    success.id = 'success-message';
+    success.innerText = message;
+    success.style.color = '#00CAD3';
+    success.style.marginTop = '1rem';
+    success.style.fontFamily = 'Breymont-light';
+    success.style.textAlign = 'center';
+    form.appendChild(success);
+  }
+
   const form = document.getElementById('contact-form');
   if (form) form.addEventListener('submit', validateForm);
 </script>
+
 
 <style>
   .contact-container {
