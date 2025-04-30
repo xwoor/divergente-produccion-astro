@@ -19,14 +19,10 @@ import Clientes from '../components/Clientes.astro';
 	</div>
 	<div class="mt-100" id="proyectos">
 		<SlideSection client:load />
-		<div id="crew">
-			<Crew />
-			<Clientes />
-		</div>
 	</div>
-	<BottonMenu  />
-	<div id="visitanos">
-		<Contacto />
-	</div>
+	<Crew />
+	<Clientes />
+	<Contacto />
+	<BottonMenu />
 	<Footer />
 </Layout>

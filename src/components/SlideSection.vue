@@ -1,9 +1,4 @@
 <template>
-  <img 
-    data-aos="fade-right"
-    data-aos-duration="3000"
-    class="img-tentaculo-01" src="/images/tentaculo-01.png" alt="img-tentaculo-01">
-  
   <div class="slide-container" data-aos="fade-up">
     <div class="titles">
       <button
@@ -80,7 +75,7 @@ watch(activeSlide, () => {
   display: flex;
   color: #fff;
   font-family: sans-serif;
-  padding: 20px;
+  padding: 100px 10px 20px;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -129,7 +124,7 @@ watch(activeSlide, () => {
 }
 
 .content h3 {
-  font-family: "AkzidenzGrotesk", sans-serif;
+  font-family: "Akzidenz-grotesk-light", sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 22px;
@@ -139,7 +134,7 @@ watch(activeSlide, () => {
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 20px;
-  font-family: 'AkzidenzGrotesk';
+  font-family: 'Akzidenz-grotesk-light';
 }
 
 .boton-cotizar {
@@ -199,18 +194,8 @@ watch(activeSlide, () => {
     transform: scale(1);
   }
 }
-.img-tentaculo-01 {
-  position: absolute;
-  width: 20%;
-  -webkit-user-drag: none;
-  animation: flotar 3s ease-in-out infinite;
-  will-change: transform;
-}
 
 @media (max-width: 768px) {
-  .img-tentaculo-01{
-    display: none;
-  }
   .slide-container {
     flex-direction: column;
     padding: 20px 10px;
@@ -226,7 +211,7 @@ watch(activeSlide, () => {
   }
 
   .titles::-webkit-scrollbar {
-    display: none; /* Oculta la scrollbar en navegadores Webkit */
+    display: none;
   }
 
   .titles button {
@@ -245,6 +230,9 @@ watch(activeSlide, () => {
     width: 100%;
     border-left: none;
     padding: 0px;
+  }
+  .content p{
+    text-align: center;
   }
 }
 

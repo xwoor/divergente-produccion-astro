@@ -60,14 +60,10 @@ const teamMembers = [
   },
 ];
 ---
-<section class="crew-section2">
+<section class="crew-section2" id="crew">
   <div class="crew-grid2">
     <img class="img-crew" data-aos="fade-right" data-aos-delay="300" src="/images/Crew.png" alt="Crew">
   </div>
-</section>
-
-<section class="tentaculo-container">
-  <img class="img-tentaculo-02 custom-animation" src="/images/tentaculo-02.png" alt="img-tentaculo-02">
 </section>
 
 <section class="crew-section">
@@ -92,29 +88,6 @@ const teamMembers = [
 
 
 <style>
-  .img-tentaculo-02 {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 1s ease-out;
-}
-
-.img-tentaculo-02.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-  .tentaculo-container{
-    margin-bottom: 50px;
-  }
-  .img-tentaculo-02{
-    position: absolute;
-    width: 25%;
-    -webkit-user-drag: none;
-    animation: flotar 3s ease-in-out infinite;
-    will-change: transform;
-    z-index: 1;
-    right: 0px;
-  }
   .text-overlay {
       width: 100%;
       position: relative;
@@ -152,7 +125,6 @@ const teamMembers = [
     .crew-section {
         display: flex;
         justify-content: center;
-        align-items: center;
         min-height: 100vh;
     }
     .crew-section2 {
@@ -257,12 +229,3 @@ const teamMembers = [
         }
     }
 </style>
-
-<script defer>
-  document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(() => {
-    document.querySelector('.img-tentaculo-02').classList.add('active');
-  }, 10000); // Aparece después de 1 segundo (1000ms)
-});
-
-</script>

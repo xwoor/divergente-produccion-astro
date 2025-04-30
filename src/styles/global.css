@@ -13,6 +13,10 @@
     src: url('../assets/fonts/KanedaGothic-ExtraBoldItalic.ttf') format('truetype');
 }
 @font-face {
+    font-family: 'Akzidenz-grotesk-light';
+    src: url('../assets/fonts/Akzidenz-grotesk-light.ttf') format('truetype');
+}
+@font-face {
     font-family: 'AkzidenzGrotesk';
     src: url('../assets/fonts/AkzidenzGrotesk.otf') format('opentype');
 }
@@ -53,8 +57,8 @@
 }
   
 .titulo.nitido {
-z-index: 2;
-transform: scale(1);
+    z-index: 2;
+    transform: scale(1);
 }
   
   /* Encabezados */
@@ -146,6 +150,7 @@ video {
 }
 
 .container {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -154,7 +159,8 @@ video {
     align-content: center;
     overflow: auto;
     flex-direction: row;
-
+    margin-top: 25px;
+    z-index: 1;
 }
 
 .container div {    
@@ -185,7 +191,7 @@ video {
     font-size:clamp(12px, 2.5vw, 14px);
     font-weight: 800;
     letter-spacing: 1px;
-    margin-left: -120px;
+    margin-left: -90px;
 }
 
 .iconos {
@@ -221,6 +227,7 @@ a{
     }
     .container{
         width: auto;
+        margin-top: 0px;
     }
     .header{
         background-color: white;
@@ -240,7 +247,7 @@ a{
 }
 
 .oculto-por-footer {
-    display: none !important; /* Oculta el elemento */
+    display: none !important;
     }
 
     @keyframes flotar {
@@ -254,4 +261,6 @@ a{
         transform: translateY(0);
     }
 }
-
+img{
+    -webkit-user-drag: none;
+}

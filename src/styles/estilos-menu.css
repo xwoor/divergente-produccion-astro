@@ -103,7 +103,7 @@
         }
 
         .e-con.e-flex {
-            --width: 100%;
+            --width: 90%;
             --flex-wrap: var(--flex-wrap-mobile)
         }
     }
