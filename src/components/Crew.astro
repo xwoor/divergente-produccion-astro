@@ -7,7 +7,6 @@ import team_richie from "/public/images/team/team_richie.png";
 import team_jony from "/public/images/team/team_jony.png";
 import team_mario from "/public/images/team/team_mario.png";
 
-
 const teamMembers = [
   {
     duration: 0,
@@ -60,13 +59,20 @@ const teamMembers = [
   },
 ];
 ---
+<img
+src="/images/tentaculo-2.png"
+alt="Tentáculo derecho"
+class="tentaculo tentaculo-right"
+style="--offset: 0%;" />
 <section class="crew-section2" id="crew">
   <div class="crew-grid2">
     <img class="img-crew" data-aos="fade-right" data-aos-delay="300" src="/images/Crew.png" alt="Crew">
   </div>
+  
 </section>
 
 <section class="crew-section">
+
   <div class="crew-grid">
     {teamMembers.map((member, index) => (
       <div class="crew-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={`${(index + 1) * 150}`}>
@@ -126,6 +132,7 @@ const teamMembers = [
         display: flex;
         justify-content: center;
         min-height: 100vh;
+        background-color: black;
     }
     .crew-section2 {
         width: 100%;

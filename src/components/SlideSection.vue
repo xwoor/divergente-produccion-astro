@@ -1,4 +1,10 @@
 <template>
+  <img
+    src="/images/tentaculo-1.png"
+    alt="Tentáculo izquierdo"
+    class="tentaculo tentaculo-left"
+    style="--offset: -50%;" />
+
   <div class="slide-container" data-aos="fade-up">
     <div class="titles">
       <button
@@ -19,13 +25,14 @@
         </p>
       </div>
       <button class="boton-cotizar animate__animated animate__fadeInUp">
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=573027212221&text=Hola%2C%20quiero%20conocerlos%20mejor!">cotizar</a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=573027212221&text=!Hola%2C%20quiero%20conocerlos%20mejor!">cotizar</a>
       </button>
     </div>
   </div>
 </template>
 
 <script setup>
+
 import { ref, watch } from 'vue';
 
 const slides = [
@@ -225,11 +232,15 @@ watch(activeSlide, () => {
   .active-indicator {
     display: none;
   }
+  .boton-cotizar{
+    margin-left: 0px;
+  }
 
   .content {
     width: 100%;
     border-left: none;
     padding: 0px;
+    text-align: center;
   }
   .content p{
     text-align: center;

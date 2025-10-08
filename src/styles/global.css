@@ -264,3 +264,42 @@ a{
 img{
     -webkit-user-drag: none;
 }
+
+/* Tentaculos */
+
+.tentaculo {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    animation: flotar 6s ease-in-out infinite;
+  }
+  
+  .tentaculo-left {
+    left: 0;
+    transform: translateX(-50%);
+  }
+  
+  .tentaculo-right {
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  @keyframes flotar {
+    0%, 100% {
+      transform: translateY(0) translateX(var(--offset, 0));
+    }
+    50% {
+      transform: translateY(-10px) translateX(var(--offset, 0));
+    }
+  }
+  
+  /* Desactivar en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .tentaculo {
+      display: none;
+    }
+  }
+  
+  .mi-seccion {
+    position: relative;
+  }

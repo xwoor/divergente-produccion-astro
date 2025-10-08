@@ -1,12 +1,17 @@
 ---
-import logo1 from '/public/clientes/icono-01.png';
-import logo2 from '/public/clientes/icono-02.png';
-import logo3 from '/public/clientes/icono-03.png';
-import logo4 from '/public/clientes/icono-04.png';
-import logo5 from '/public/clientes/icono-05.png';
-import logo6 from '/public/clientes/icono-06.png';
+import logo1 from '/public/clientes/icono-1.png';
+import logo2 from '/public/clientes/icono-2.png';
+import logo3 from '/public/clientes/icono-3.png';
+import logo4 from '/public/clientes/icono-4.png';
+import logo5 from '/public/clientes/icono-5.png';
+import logo6 from '/public/clientes/icono-6.png';
+import logo7 from '/public/clientes/icono-7.png';
+import logo8 from '/public/clientes/icono-8.png';
+import logo9 from '/public/clientes/icono-9.png';
+import logo10 from '/public/clientes/icono-10.png';
+import logo11 from '/public/clientes/icono-11.png';
 
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11];
 const repeatedLogos = [...logos, ...logos, ...logos,...logos];
 
 ---
@@ -62,7 +67,7 @@ const repeatedLogos = [...logos, ...logos, ...logos,...logos];
 
   .slide-track {
     display: flex;
-    animation: scroll 10s linear infinite; /* Más lento */
+    animation: scroll 25s linear infinite; /* Más lento */
     gap: 3rem;
   }
 
@@ -75,7 +80,7 @@ const repeatedLogos = [...logos, ...logos, ...logos,...logos];
 
   .slide img {
     max-width: 100%;
-    height: auto;
+    height: 50px;
     object-fit: contain;
     -webkit-user-drag: none;
   }

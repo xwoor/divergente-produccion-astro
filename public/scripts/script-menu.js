@@ -134,3 +134,16 @@ $(window).on('load scroll resize', function(e){
         }
     });
 });
+
+// Solo para menú móvil
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }, 300); // Espera a que se cierre el menú si es animado
+      }
+    });
+  });
+  
