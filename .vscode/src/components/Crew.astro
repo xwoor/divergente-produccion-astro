@@ -1,0 +1,246 @@
+---
+import team_javi from "/public/images/team/team_javi.png";
+import team_ana from "/public/images/team/team_ana.png";
+import team_juan from "/public/images/team/team_juan.png";
+import team_pierre from "/public/images/team/team_pierre.png";
+import team_richie from "/public/images/team/team_richie.png";
+import team_jony from "/public/images/team/team_jony.png";
+import team_mario from "/public/images/team/team_mario.png";
+import team_vale from "/public/images/team/team_vale.png";
+
+const teamMembers = [
+  {
+    duration: 0,
+    name: 'Javi',
+    position: 'ceo',
+    image: team_javi,
+    txt: "/images/team/txt_javi.png"
+  },
+  {
+    duration: 0,
+    name: 'Ana',
+    position: 'cfo',
+    image: team_ana,
+    txt: "/images/team/txt_ana.png"
+  },
+  {
+    duration: 1,
+    name: 'Juan',
+    position: 'coo',
+    image: team_juan,
+    txt: "/images/team/txt_juan.png"
+  },
+  {
+    duration: 1,
+    name: 'Pierre',
+    position: 'grtE. compras',
+    image: team_pierre,
+    txt: "/images/team/txt_pierre.png"
+  },
+  {
+    duration: 2,
+    name: 'Richie',
+    position: 'dt. producción',
+    image: team_richie,
+    txt:  "/images/team/txt_richie.png"
+  },
+  {
+    duration: 2,
+    name: 'Jony',
+    position: 'dt. crEATIVO',
+    image: team_jony,
+    txt: "/images/team/txt_jony.png"
+  },
+  {
+    duration: 2,
+    name: 'Mario',
+    position: 'web dev / seo',
+    image: team_mario,
+    txt: "/images/team/txt_mario.png"
+  },
+  {
+    duration: 2,
+    name: 'Vale',
+    position: 'prod. EjEcutiva',
+    image: team_vale,
+    txt: "/images/team/txt_vale.png"
+  },
+];
+---
+<img
+src="/images/tentaculo-2.png"
+alt="Tentáculo derecho"
+class="tentaculo tentaculo-right"
+style="--offset: 0%;" />
+<section class="crew-section2" id="crew">
+  <div class="crew-grid2">
+    <img class="img-crew" data-aos="fade-right" data-aos-delay="300" src="/images/Crew.png" alt="Crew">
+  </div>
+  
+</section>
+
+<section class="crew-section">
+
+  <div class="crew-grid">
+    {teamMembers.map((member, index) => (
+      <div class="crew-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={`${(index + 1) * 150}`}>
+        <div class="image-container">
+          <img src={ member.image.src } alt={ member.name } title={member.name} />
+          <div class="text-overlay">
+            {member.txt ? (
+              <img src={member.txt} alt={member.name} class="txt-name" />
+            ) : (
+              <h2>{member.name}</h2>
+            )}
+            <p>{member.position}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+<style>
+  .text-overlay {
+      width: 100%;
+      position: relative;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .text-overlay img{
+      padding: 0px;
+      margin-bottom: -10px;
+      width:100px !important;
+      width: auto;
+    }
+
+    .txt-name {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 6px black);
+      object-fit: contain;
+      z-index: 2;
+    }
+    p{
+        margin: 0px;
+    }
+    .crew-section {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: black;
+    }
+    .crew-section2 {
+        width: 100%;
+        height: 140px;
+    }
+    .crew-grid2{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .crew-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        width: 90%;
+        max-width:  950px;
+        /* margin-bottom: 150px; */
+    }
+
+    .crew-member {
+        position: relative;
+        width: calc(25% - 20px);
+        max-width: 300px;
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 146.29%; /* Relación de aspecto 216:316 */
+    }
+    .img-crew{
+      -webkit-user-drag: none;
+    }
+    .image-container img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+      -webkit-user-drag: none;
+    }
+
+
+    .text-overlay {
+        width: 100%;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        
+    }
+
+    .text-overlay h2 {
+        margin-bottom: 0px;
+        font-family: 'KanedaGothic';
+        font-size:4em !important;
+        text-transform: uppercase;
+        line-height: 4rem;
+        filter: blur(0);
+    }
+    .titulo {
+      color: white;
+      font-family: 'KanedaGothic', sans-serif;
+      font-size: 5em;
+      text-transform: uppercase;
+      transform: skewX(-5deg);
+      animation: blurGlow 1.5s infinite alternate ease-in-out;
+    }
+
+    .text-overlay p {
+        font-size: 1em;
+        font-family: 'Breymont-light';
+        letter-spacing: 2px;
+    }
+
+    .crew-member:hover .image-container img {
+        transform: scale(1.1);
+    }
+
+    .crew-member:hover .text-overlay {
+        opacity: 1;
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 768px) {   
+        .crew-section2 {
+            height: auto;
+            background-color: black;
+        }
+        .crew-member {
+            width: calc(50% - 20px); /* 2 miembros por fila */
+        }
+    }
+</style>

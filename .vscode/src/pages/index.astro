@@ -1,0 +1,30 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import VideoSection from '../components/VideoSection.astro'
+import BottonMenu from '../components/BottomMenu.astro'
+import SlideSection from '../components/SlideSection.vue';
+import Crew from '../components/Crew.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import Contacto from '../components/Contacto.astro';
+import Clientes from '../components/Clientes.astro';
+import YouTubeVideos from '../components/YouTubeVideos.vue';
+
+---
+
+<Layout>
+	<div id="inicio">
+		<Header />
+		<VideoSection />
+	</div>
+	<div class="mt-100" id="proyectos">
+		<SlideSection client:load />
+	</div>
+	<Clientes />
+	<YouTubeVideos client:load />
+	<Crew />
+	<Contacto />
+	<BottonMenu />
+	<Footer />
+</Layout>

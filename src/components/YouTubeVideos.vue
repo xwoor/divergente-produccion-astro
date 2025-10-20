@@ -40,7 +40,7 @@ const videos = ref([
   { id: 'Rl1EJK4oj5s', title: 'El primer casino donde nadie pierde para el Banco de Bogotá - By Divergente' },
   { id: '6KlFdrfRCGg', title: 'Banco de Bogotá Cumbre Mundo Pyme 2024 - By Divergente' },
   { id: 'Fg_zrwCom6E', title: 'Consiente a tu camello, la cuenta que tu camello merece - By Divergente' },
-  { id: '-AALCeBkwEk', title: 'Premios Nuestra Gente 2023, La Guajira para el Banco de Bogotá - By Divergente' },
+  { id: '-AALCeBkwEk', title: 'Tag Aval tu identidad siempre tiene la última palabra - By Divergente' },
   { id: 'XVwVn-HEiI0', title: 'Premios Nuestra Gente 2023, La Guajira para el Banco de Bogotá - By Divergente' },
   { id: 'uYN8M2Q_4MM', title: '¿A qué sabe tu banco? Banco de Bogotá - By Divergente' },
   { id: 'cp_w2WAGlfQ', title: 'Samsung esta aquí. Lanzamiento Línea S - By Divergente7' },
